@@ -130,16 +130,18 @@ export function ReportView({ result }: { result: FinanceResult }) {
       )}
 
       {hasMarketData && (
-        <div className="grid-2">
-          <div className="panel">
-            <div className="panel-head">
-              <h3>📈 Price action · last {history.length} sessions</h3>
-              <span className="meta">Alpha Vantage</span>
+        <div className={history.length > 1 ? 'grid-2' : undefined}>
+          {history.length > 1 && (
+            <div className="panel">
+              <div className="panel-head">
+                <h3>📈 Price action · last {history.length} sessions</h3>
+                <span className="meta">Alpha Vantage</span>
+              </div>
+              <div className="panel-body">
+                <PriceChart history={history} />
+              </div>
             </div>
-            <div className="panel-body">
-              <PriceChart history={history} />
-            </div>
-          </div>
+          )}
           <div className="panel">
             <div className="panel-head">
               <h3>🧮 Key metrics</h3>
