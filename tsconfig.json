@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "lib": ["ES2022", "DOM"],
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "motia/workbench": ["node_modules/motia/dist/types/workbench.d.ts"]
+    }
+  },
+  "include": ["steps/**/*", "services/**/*", "types.d.ts"],
+  "exclude": ["node_modules", "web", "dist", ".motia"]
+}

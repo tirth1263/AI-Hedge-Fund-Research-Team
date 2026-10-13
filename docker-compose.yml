@@ -1,0 +1,22 @@
+services:
+  ai-hedgefund:
+    build: .
+    image: ai-hedgefund:latest
+    container_name: ai-hedgefund
+    ports:
+      - "3000:3000"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      - NEBIUS_API_KEY=${NEBIUS_API_KEY:-}
+      - NEBIUS_BASE_URL=${NEBIUS_BASE_URL:-https://api.tokenfactory.nebius.com/v1}
+      - NEBIUS_MODEL=${NEBIUS_MODEL:-Qwen/Qwen3-14B}
+      - ALPHA_VANTAGE_KEY=${ALPHA_VANTAGE_KEY:-}
+      - SERPER_API_KEY=${SERPER_API_KEY:-}
+    volumes:
+      - motia-data:/app/.motia
+    restart: unless-stopped
+
+volumes:
+  motia-data:

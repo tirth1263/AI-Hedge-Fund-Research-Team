@@ -1,0 +1,7 @@
+node_modules
+.motia
+.env
+.git
+web
+docs
+*.log

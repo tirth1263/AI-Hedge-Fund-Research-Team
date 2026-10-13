@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.motia/
+.env
+.env.*
+!env.example
+*.log
+.DS_Store
+web/dist/
+web/node_modules/
+.vscode/
+.idea/
+tsconfig.tsbuildinfo
+appendonlydir/
+*.rdb
+*.aof

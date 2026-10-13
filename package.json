@@ -1,0 +1,43 @@
+{
+  "name": "ai-hedge-fund-research-team",
+  "version": "1.0.0",
+  "description": "Multi-agent AI hedge fund research workflow built on Motia and powered by Nebius AI Studio",
+  "private": true,
+  "license": "MIT",
+  "author": "Tirth Rank (https://github.com/tirth1263)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tirth1263/AI-Hedge-Fund-Research-Team.git"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "motia dev",
+    "start": "motia start",
+    "generate-types": "motia generate-types",
+    "typecheck": "tsc --noEmit",
+    "web:dev": "npm --prefix web run dev",
+    "web:build": "npm --prefix web run build"
+  },
+  "dependencies": {
+    "motia": "0.13.0",
+    "react": "^19.1.0",
+    "zod": "^4.1.12",
+    "@motiadev/core": "0.13.0",
+    "@motiadev/plugin-logs": "0.13.0",
+    "@motiadev/plugin-states": "0.13.0",
+    "@motiadev/plugin-endpoint": "0.13.0",
+    "@motiadev/plugin-observability": "0.13.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.2",
+    "typescript": "^5.8.3"
+  },
+  "config": {
+    "redisMemoryServer": {
+      "disablePostinstall": "1"
+    }
+  }
+}
