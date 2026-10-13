@@ -94,6 +94,10 @@ flowchart TD
     S -. view-results .-> V
 ```
 
+The dashboard animates the same graph live while the agents work, with a Motia-style tracing timeline and structured logs:
+
+<img src="docs/images/workflow.png" alt="Live workflow graph, tracing timeline and logs" width="100%" />
+
 ### How a request flows
 
 | # | Topic | Producer → Consumer | Purpose |
